@@ -24,15 +24,15 @@ public class ServiceWS {
         Met metOb = new ObjectMapper().readerFor(Met.class).readValue(met);
 
         String smhiTime = smhiOb.getTimeSeries().get(26).getValidTime();
-        String smhiTemp = smhiOb.getTimeSeries().get(24).getParameters().get(1).getValues().toString();
+        String smhiTemp = smhiOb.getTimeSeries().get(26).getParameters().get(1).getValues().toString();
         //Otherwise the format is [26] example
         smhiTemp = smhiTemp.charAt(1) + "" + smhiTemp.charAt(2);
-        String smhiHumidity = smhiOb.getTimeSeries().get(24).getParameters().get(5).getValues().toString();
+        String smhiHumidity = smhiOb.getTimeSeries().get(26).getParameters().get(5).getValues().toString();
         smhiHumidity = smhiHumidity.charAt(1) + "" + smhiHumidity.charAt(2);
 
         String metTime = metOb.getProperties().getTimeseries().get(26).getTime();
-        Double metTemp = metOb.getProperties().getTimeseries().get(4).getData().getInstant().getDetails().getAirTemperature();
-        Double metHumidity = metOb.getProperties().getTimeseries().get(24).getData().getInstant().getDetails().getRelativeHumidity();
+        Double metTemp = metOb.getProperties().getTimeseries().get(26).getData().getInstant().getDetails().getAirTemperature();
+        Double metHumidity = metOb.getProperties().getTimeseries().get(26).getData().getInstant().getDetails().getRelativeHumidity();
 
         printToTerminal(smhiTime, smhiTemp, smhiHumidity, metTime, metTemp, metHumidity);
 
@@ -52,15 +52,15 @@ public class ServiceWS {
         Met metOb = new ObjectMapper().readerFor(Met.class).readValue(met);
 
         String smhiTime = smhiOb.getTimeSeries().get(26).getValidTime();
-        String smhiTemp = smhiOb.getTimeSeries().get(24).getParameters().get(1).getValues().toString();
+        String smhiTemp = smhiOb.getTimeSeries().get(26).getParameters().get(1).getValues().toString();
         //Otherwise the format is [26] example
         smhiTemp = smhiTemp.charAt(1) + "" + smhiTemp.charAt(2);
-        String smhiHumidity = smhiOb.getTimeSeries().get(24).getParameters().get(5).getValues().toString();
+        String smhiHumidity = smhiOb.getTimeSeries().get(26).getParameters().get(5).getValues().toString();
         smhiHumidity = smhiHumidity.charAt(1) + "" + smhiHumidity.charAt(2);
 
         String metTime = metOb.getProperties().getTimeseries().get(26).getTime();
-        Double metTemp = metOb.getProperties().getTimeseries().get(4).getData().getInstant().getDetails().getAirTemperature();
-        Double metHumidity = metOb.getProperties().getTimeseries().get(24).getData().getInstant().getDetails().getRelativeHumidity();
+        Double metTemp = metOb.getProperties().getTimeseries().get(26).getData().getInstant().getDetails().getAirTemperature();
+        Double metHumidity = metOb.getProperties().getTimeseries().get(26).getData().getInstant().getDetails().getRelativeHumidity();
 
         printToTerminal(smhiTime, smhiTemp, smhiHumidity, metTime, metTemp, metHumidity);
 
